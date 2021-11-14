@@ -25,6 +25,8 @@ namespace OneInch.Api
             Quote = new QuoteClient(_api);
             Swap = new SwapClient(_api);
             Token = new TokenClient(_api);
+            LiquiditySources = new LiquiditySourcesClient(_api);
+
         }  
 
         /// <summary>
@@ -77,5 +79,10 @@ namespace OneInch.Api
         /// Instance of ITokenClient that manages requests with the "Token" service.
         /// </summary>
         public ITokenClient Token {get;}
+
+        /// <summary>
+        /// Instance of ILiquiditySourcesClient that manages requests with the "LiquiditySources" service.
+        /// </summary>
+        public ILiquiditySourcesClient LiquiditySources {get;}
     }
 }

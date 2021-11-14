@@ -108,13 +108,12 @@ namespace HelloDeFi
 
         static async Task<ApproveCallDataResponseDto> ApproveDaiSpend()
         {
-            var spendRequest = new ApproveCalldataRequest();
-            spendRequest.tokenAddress = DAI_TOKEN_ADDRESS;
-            spendRequest.infinity = true;
+            var approveTxRequest = new ApproveTransactionRequest();
+            approveTxRequest.tokenAddress = DAI_TOKEN_ADDRESS;
 
              return await _apiClient
                             .Approve
-                            .GetApprovedCallData(spendRequest);
+                            .GetTransactionApproval(approveTxRequest);
 
         }
 

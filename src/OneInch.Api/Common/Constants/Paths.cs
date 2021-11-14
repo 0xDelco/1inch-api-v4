@@ -17,6 +17,7 @@ namespace OneInch.Api
             public static readonly string ProtocolNames = "protocols";
             public static readonly string ProtocolImages = "protocols/images";
             public static readonly string Tokens = "tokens";
+            public static readonly string LiquiditySources = "liquidity-sources";
             public static readonly string Swap = "swap";
         }
     } 

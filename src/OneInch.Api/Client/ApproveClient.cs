@@ -40,13 +40,25 @@ namespace OneInch.Api
         /// <remarks>This interaction is required first for any tokens you wish to swap through the protocol. Otherwise, the api
         /// will return an error when requesting a swap. Once spend is approved for a wallet you do not need to do this again.
         /// </remarks>
-        /// <param name="request">ApproveCalldataRequest containing approval information.</param>
+        /// <param name="request">ApproveTransactionRequest containing approval information.</param>
         /// <returns>ApproveCallDataResponseDto response.</returns>
-        public async Task<ApproveCallDataResponseDto> GetApprovedCallData(ApproveCalldataRequest request)
+        public async Task<ApproveCallDataResponseDto> GetTransactionApproval(ApproveTransactionRequest request)
         {
             var criteria = request.GetParameters();
             var response = await _api.SendRequest(criteria); 
             return JsonSerializer.Deserialize<ApproveCallDataResponseDto>(response);
+        }
+
+        /// <summary>
+        /// Gets the number of tokens that the 1inch router is allowed to spend.
+        /// </summary>
+        /// <param name="request">Criteria for allowance request.</param>
+        /// <returns>TokenAllowance response for criteria submitted.</returns>
+        public async Task<TokenAllowance> GetAllowance(AllowanceRequest request)
+        {
+            var criteria = request.GetParameters();
+            var response = await _api.SendRequest(criteria); 
+            return JsonSerializer.Deserialize<TokenAllowance>(response);
         }
     }
 }

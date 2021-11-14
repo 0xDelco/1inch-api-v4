@@ -4,8 +4,8 @@ using System;
 
 namespace OneInch.Api
 {   
-    [OneInchRoute("approve/calldata")]
-    public class ApproveCalldataRequest : OneInchRequestBase
+    [OneInchRoute("approve/transaction")]
+    public class ApproveTransactionRequest : OneInchRequestBase
     {
         [OneInchParameter]
         public string tokenAddress {get;set;}
@@ -13,7 +13,5 @@ namespace OneInch.Api
         [OneInchParameter]
         public string amount {get;set;}
 
-        [OneInchParameter]
-        public bool infinity {get;set;}
     }
 }
