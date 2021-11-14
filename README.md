@@ -198,6 +198,6 @@ You can find all of the official Swagger documentation for the various chain cli
 - [ ] Unit Test Coverage
 - [ ] Swapping logic flow diagrams 
 - [ ] Advanced API usage examples
-- [ ] Examples to sign and send swap transactions via [Nethereum]([https://nethereum.com/](https://nethereum.com/)).
+- [ ] Examples to sign and send swap transactions via [Nethereum]([https://nethereum.com/](https://nethereum.com/))
 
 
