@@ -55,7 +55,7 @@ namespace HelloDeFi
             var swap = GetSwap(quote).Result;
             
             // Step 5
-            SignAndSendTransaction(swap.tx.data);
+            SignAndSendTransaction(swap.Tx.data);
         }
 
         /// <summary>
@@ -76,11 +76,11 @@ namespace HelloDeFi
         {
             var request = new SwapRequest()
             {
-                fromTokenAddress = quote.fromToken.address,
-                toTokenAddress = quote.toToken.address,
-                fromAddress = "0xc2d742B37970BD9987FeA0846c20c43bD4150b0d",
-                amount =  100000000000000000,
-                slippage = 1
+                FromTokenAddress = quote.FromToken.address,
+                ToTokenAddress = quote.ToToken.address,
+                FromAddress = "0xc2d742B37970BD9987FeA0846c20c43bD4150b0d",
+                Amount =  100000000000000000,
+                Slippage = 1
             };
             
             return await _apiClient
@@ -96,9 +96,9 @@ namespace HelloDeFi
         {
             var request = new QuoteRequest()
             {
-                fromTokenAddress = DAI_TOKEN_ADDRESS,
-                toTokenAddress = USDC_TOKEN_ADDRESS,
-                amount = 100000000000000000
+                FromTokenAddress = DAI_TOKEN_ADDRESS,
+                ToTokenAddress = USDC_TOKEN_ADDRESS,
+                Amount = 100000000000000000
             };
 
             return await _apiClient
@@ -109,7 +109,7 @@ namespace HelloDeFi
         static async Task<ApproveCallDataResponseDto> ApproveDaiSpend()
         {
             var approveTxRequest = new ApproveTransactionRequest();
-            approveTxRequest.tokenAddress = DAI_TOKEN_ADDRESS;
+            approveTxRequest.TokenAddress = DAI_TOKEN_ADDRESS;
 
              return await _apiClient
                             .Approve

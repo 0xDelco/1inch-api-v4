@@ -7,11 +7,11 @@ namespace OneInch.Api
     [OneInchRoute("approve/allowance")]
     public class AllowanceRequest : OneInchRequestBase
     {
-        [OneInchParameter]
-        public string tokenAddress {get;set;}
+        [OneInchParameter("tokenAddress")]
+        public string TokenAddress {get;set;}
 
-        [OneInchParameter]
-        public string walletAddress {get;set;}
+        [OneInchParameter("walletAddress")]
+        public string WalletAddress {get;set;}
 
     }
 }

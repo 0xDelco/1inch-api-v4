@@ -9,94 +9,94 @@ namespace OneInch.Api
     {
         public QuoteRequest()
         {
-            connectorTokens = new List<string>();
-            protocols = new List<string>();
+            ConnectorTokens = new List<string>();
+            Protocols = new List<string>();
         }
 
         /// <summary>
         /// Contract token address being sold.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public string fromTokenAddress {get;set;}
+        [OneInchParameter("fromTokenAddress")]
+        public string FromTokenAddress {get;set;}
         
         /// <summary>
         /// Contract token address being bought.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public string toTokenAddress {get;set;}
+        [OneInchParameter("toTokenAddress")]
+        public string ToTokenAddress {get;set;}
         
         /// <summary>
         /// Amount of a token to sell, set in minimal divisible units.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public long amount {get;set;}
+        [OneInchParameter("amount")]
+        public long Amount {get;set;}
 
         /// <summary>
         /// Token connectors to assist exchange with routing if a pool with default connectors cannot be found.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public List<string> connectorTokens {get;set;}
+        [OneInchParameter("connectorTokens")]
+        public List<string> ConnectorTokens {get;set;}
         
         /// <summary>
         /// Allowable fee percentage limit (min: 0; max: 3; default: 0;).
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int fee {get;set;}
+        [OneInchParameter("fee")]
+        public int Fee {get;set;}
         
         /// <summary>
         /// 
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int gasPrice {get;set;}
+        [OneInchParameter("gasPrice")]
+        public int GasPrice {get;set;}
         
         /// <summary>
         /// List of liquidity protocol names to use. If not set, all liquidity protocols will be used.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public List<string> protocols {get;set;}
+        [OneInchParameter("protocols")]
+        public List<string> Protocols {get;set;}
         
         /// <summary>
         /// Maximum number of token-connectors to be used in a transaction.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int complexityLevel {get;set;}
+        [OneInchParameter("complexityLevel")]
+        public int ComplexityLevel {get;set;}
         
         /// <summary>
         /// Limit maximum number of main route parts.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int mainRouteParts {get;set;}
+        [OneInchParameter("mainRouteParts")]
+        public int MainRouteParts {get;set;}
 
         /// <summary>
         /// Limit maximum number of route parts.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int parts {get;set;}
+        [OneInchParameter("parts")]
+        public int Parts {get;set;}
         
         /// <summary>
         /// Maximum amount of gas for a swap.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int gasLimit {get;set;}
+        [OneInchParameter("gasLimit")]
+        public int GasLimit {get;set;}
 
 
         /// <summary>
         /// Limit maximum number of virtual parts.
         /// </summary>
         /// <value></value>
-        [OneInchParameter]
-        public int virtualParts {get;set;}
+        [OneInchParameter("virtualParts")]
+        public int VirtualParts {get;set;}
 
         /// <summary>
         /// Extracts addresses from Token objects and adds them to the connectorTokens list.
@@ -105,7 +105,7 @@ namespace OneInch.Api
         public void AddConnectorTokens(List<Token> tokens)
         {
             tokens.ForEach(x => {
-                this.connectorTokens.Add(x.address);
+                this.ConnectorTokens.Add(x.address);
             });
         }
 
@@ -115,7 +115,7 @@ namespace OneInch.Api
         /// <param name="tokens"></param>
         public void AddConnectorToken(Token token)
         {
-            this.connectorTokens.Add(token.address);
+            this.ConnectorTokens.Add(token.address);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace OneInch.Api
         /// </summary>
         public void ClearConnectorTokens()
         {
-            this.connectorTokens.Clear();
+            this.ConnectorTokens.Clear();
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace OneInch.Api
         /// <param name="token"></param>
         public void SetToToken(Token token)
         {
-            this.toTokenAddress = token.address;
+            this.ToTokenAddress = token.address;
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace OneInch.Api
         /// <param name="token"></param>
         public void SetFromToken(Token token)
         {
-            this.fromTokenAddress = token.address;
+            this.FromTokenAddress = token.address;
         }
     }
 }
