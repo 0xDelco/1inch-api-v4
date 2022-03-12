@@ -13,7 +13,8 @@ Each of the objects in the domain are meant to provide the inbound and outbound 
 - ✅ Polygon
 - ✅ Optimism
 - ✅ Arbitrum
-
+- ✅ Avalanche
+- ✅ Gnosis Chain
 
 ## Getting Started
 

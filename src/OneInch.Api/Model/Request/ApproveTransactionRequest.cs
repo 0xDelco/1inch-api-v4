@@ -7,11 +7,11 @@ namespace OneInch.Api
     [OneInchRoute("approve/transaction")]
     public class ApproveTransactionRequest : OneInchRequestBase
     {
-        [OneInchParameter]
-        public string tokenAddress {get;set;}
+        [OneInchParameter("tokenAddress")]
+        public string TokenAddress {get;set;}
 
-        [OneInchParameter]
-        public string amount {get;set;}
+        [OneInchParameter("amount")]
+        public string Amount {get;set;}
 
     }
 }

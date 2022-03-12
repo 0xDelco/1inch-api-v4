@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System;
 
-
-
 namespace OneInch.Api
 {   
     [OneInchRoute("swap")]
@@ -11,66 +9,66 @@ namespace OneInch.Api
     {
         public SwapRequest()
         {
-            protocols = new List<string>();
-            connectorTokens = new List<string>();
+            Protocols = new List<string>();
+            ConnectorTokens = new List<string>();
         }
 
-        [OneInchParameter]
-        public string fromTokenAddress {get;set;}
+        [OneInchParameter("fromTokenAddress")]
+        public string FromTokenAddress {get;set;}
 
-        [OneInchParameter]
-        public string toTokenAddress {get;set;}
+        [OneInchParameter("toTokenAddress")]
+        public string ToTokenAddress {get;set;}
 
-        [OneInchParameter]
-        public long amount {get;set;}
+        [OneInchParameter("amount")]
+        public long Amount {get;set;}
 
-        [OneInchParameter]
-        public string fromAddress {get;set;}
+        [OneInchParameter("fromAddress")]
+        public string FromAddress {get;set;}
         
-        [OneInchParameter]
-        public int slippage {get;set;}
+        [OneInchParameter("slippage")]
+        public int Slippage {get;set;}
 
-        [OneInchParameter]
-        public List<string> protocols {get;set;}
+        [OneInchParameter("protocols")]
+        public List<string> Protocols {get;set;}
 
-        [OneInchParameter]
-        public string destReceiver {get;set;}
+        [OneInchParameter("destReceiver")]
+        public string DestReceiver {get;set;}
 
-        [OneInchParameter]
-        public string referrerAddress {get;set;}
+        [OneInchParameter("referrerAddress")]
+        public string ReferrerAddress {get;set;}
 
-        [OneInchParameter]
-        public int? fee {get;set;}
+        [OneInchParameter("fee")]
+        public int? Fee {get;set;}
 
-        [OneInchParameter]
-        public int? gasPrice {get;set;}
+        [OneInchParameter("gasPrice")]
+        public int? GasPrice {get;set;}
 
-        [OneInchParameter]
-        public bool? disableEstimate {get;set;} 
+        [OneInchParameter("disableEstimate")]
+        public bool? DisableEstimate {get;set;} 
 
-        [OneInchParameter]
-        public bool? burnChi {get;set;}
+        [OneInchParameter("burnChi")]
+        public bool? BurnChi {get;set;}
 
-        [OneInchParameter]
-        public bool? allowPartialFill {get;set;}
+        [OneInchParameter("allowPartialFill")]
+        public bool? AllowPartialFill {get;set;}
 
-        [OneInchParameter]
-        public int? mainRouteParts {get;set;}
+        [OneInchParameter("mainRouteParts")]
+        public int? MainRouteParts {get;set;}
 
-        [OneInchParameter]
-        public int? virtualParts {get;set;}
+        [OneInchParameter("virtualParts")]
+        public int? VirtualParts {get;set;}
 
-        [OneInchParameter]
-        public int? parts {get;set;}
+        [OneInchParameter("parts")]
+        public int? Parts {get;set;}
 
-        [OneInchParameter]
-        public List<string> connectorTokens {get;set;} 
+        [OneInchParameter("connectorTokens")]
+        public List<string> ConnectorTokens {get;set;} 
         
-        [OneInchParameter]
-        public int? complexityLevel {get;set;} 
+        [OneInchParameter("complexityLevel")]
+        public int? ComplexityLevel {get;set;} 
 
-        [OneInchParameter]
-        public int? gasLimit {get;set;}                  
+        [OneInchParameter("gasLimit")]
+        public int? GasLimit {get;set;}                  
 
     }
 }

@@ -10,6 +10,8 @@ namespace OneInch.Api
         OPTIMISM = 10,
         BINANCE_SMART_CHAIN = 56,
         POLYGON = 137,
-        ARBITRUM = 42161
+        ARBITRUM = 42161,
+        GNOSIS = 100,
+        AVALANCHE = 43114
     }
 }
