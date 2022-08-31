@@ -9,5 +9,6 @@ namespace OneInch.Api
         BlockchainSettings Arbitrum {get;set;}
         BlockchainSettings Gnosis {get;set;}
         BlockchainSettings Avalanche {get;set;}
+        BlockchainSettings Fantom {get;set;}
     }
 }

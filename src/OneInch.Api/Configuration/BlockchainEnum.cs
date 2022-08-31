@@ -12,6 +12,7 @@ namespace OneInch.Api
         POLYGON = 137,
         ARBITRUM = 42161,
         GNOSIS = 100,
-        AVALANCHE = 43114
+        AVALANCHE = 43114,
+        FANTOM = 250
     }
 }
